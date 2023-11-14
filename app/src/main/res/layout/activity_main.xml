@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/box1"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:background="@drawable/banner_biru"
+        app:circularflow_radiusInDP="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Selamat Datang, Admin"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="91dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Manajemen \nAdministrator"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <FrameLayout
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/button_rekap"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="171dp"
+            android:text="Rekap"
+            android:textColor="#001066"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/welcomeAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="85dp"
+            android:src="@drawable/welcome_admin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:text="Antrian Saat Ini"
+        android:textColor="#041378"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="sans-serif"
+        android:text="Percetakan Komersial"
+        android:textColor="#041378"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    <!-- Scroll 1 -->
+    <HorizontalScrollView
+        android:id="@+id/Percetakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <!-- antrian1 -->
+    <FrameLayout
+        android:id="@+id/antrian1"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:background="@drawable/box_antrian"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        >
+
+        <FrameLayout
+            android:id="@+id/bulatNomor1"
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/nomorAntrian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="01"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <!-- antrian2 -->
+    <FrameLayout
+        android:id="@+id/antrian2"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_antrian"
+        app:layout_constraintStart_toEndOf="@+id/antrian1"
+        app:layout_constraintTop_toBottomOf="@+id/text2">
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="02"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <!-- antrian3 -->
+    <FrameLayout
+        android:id="@+id/antrian3"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_antrian"
+        app:layout_constraintStart_toEndOf="@+id/antrian2PS"
+        app:layout_constraintTop_toBottomOf="@+id/text2">
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="03"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="140dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+    <!-- PhotoStudio -->
+    <TextView
+        android:id="@+id/photoStudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="15dp"
+        android:text="Photo Studio"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Percetakan"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+    <!-- Scroll 2 Photo Studio -->
+    <HorizontalScrollView
+        android:id="@+id/photo_ST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoStudio"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <!-- antrian1 Photo Studio -->
+    <FrameLayout
+        android:id="@+id/antrian1PS"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_antrian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoStudio">
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="01"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <!-- antrian2 Photo Studio -->
+    <FrameLayout
+        android:id="@+id/antrian2PS"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_antrian"
+        app:layout_constraintStart_toEndOf="@+id/antrian1PS"
+        app:layout_constraintTop_toBottomOf="@+id/photoStudio">
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="02"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <!-- antrian3 -->
+    <FrameLayout
+        android:id="@+id/antrian3PS"
+        android:layout_width="137dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_antrian"
+        app:layout_constraintStart_toEndOf="@+id/antrian2PS"
+        app:layout_constraintTop_toBottomOf="@+id/photoStudio">
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bulatan_nomor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="03"
+                android:textColor="@color/black"
+                android:textSize="55dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="7dp"
+            android:text="No.Hp : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="7dp"
+            android:text="Layanan : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="7dp"
+            android:text="Tanggal : "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </FrameLayout>
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/logoPerusahaan"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo_perusahaan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_ST"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+    </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottonNavbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav"
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
